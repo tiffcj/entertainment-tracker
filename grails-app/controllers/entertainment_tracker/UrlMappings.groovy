@@ -9,8 +9,16 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        group("/user") {
+            "/login" (controller: "User", action: "login", method: "POST")
+            "/addUser" (controller: "User", action: "addUser", method: "POST")
+            "/checkUsername" (controller: "User", action: "checkUsername", method:"GET")
+        }
+
+        "/"(view:"/login")
         "500"(view:'/error')
         "404"(view:'/notFound')
+
+        "/register"(view:"/register")
     }
 }

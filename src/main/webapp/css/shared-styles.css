@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/lightgreypolkadots-05-091815-637_thumb.jpg");
+    background-repeat: repeat;
+}
+
+.top-icons {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.top {
+    margin-bottom: 40px;
+}
