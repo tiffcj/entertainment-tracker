@@ -25,10 +25,17 @@ class UrlMappings {
             "/getAll/$entertainmentTypeId" (controller: "Entertainment", action: "getAllByEntertainmentType", method: "GET")
         }
 
+        group("/progress") {
+            "/" (controller: "Progress", action: "createProgress", method: "POST")
+            "/getAll/$username" (controller: "Progress", action: "getAllByUser", method: "GET")
+            "/delete/$id" (controller: "Progress", action: "deleteProgress", method: "POST")
+        }
+
         "/"(view:"/login")
         "500"(view:'/error')
         "404"(view:'/notFound')
 
+        "/login"(view:"/login")
         "/register"(view:"/register")
         "/startup" (view:"/startup")
     }

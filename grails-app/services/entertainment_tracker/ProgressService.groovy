@@ -56,11 +56,12 @@ class ProgressService {
             return 404
         } else if (currUser == null) {
             return 400
+        } else if (progress.createdByUser.username != currUser.username) {
+            return 403
         }
 
         progress.logicalDeletedByUser = currUser
         progress.logicalDeletedOnDatetime = deleteDate
-        progress.lastUpdatedByUser = currUser
         progress.lastUpdatedOnDatetime = deleteDate
 
         try {
@@ -76,6 +77,35 @@ class ProgressService {
     }
 
     def updateProgress(params) {
+        def currUser = User.findByUsername(params.username)
+        def updateDate = new Date()
+        def progress = Progress.findByIdAndLogicalDeletedOnDatetime(params.id, null)
 
+        if (progress == null) {
+            return 404
+        } else if (currUser == null) {
+            return 400
+        } else if (progress.createdByUser.username != currUser.username) {
+            return 403
+        }
+
+        progress.lastUpdatedOnDatetime = updateDate
+        if (params.progress != null) {
+            progress.progress = params.progress
+        }
+        if (params.entertainment != null && params.entertainment.id != null && params.entertainment.name != null) {
+
+        }
+
+        try {
+            if (!progress.save(flush:true)) {
+                println progress.errors
+                return progress.errors
+            } else {
+                return progress
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e)
+        }
     }
 }

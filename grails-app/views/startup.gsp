@@ -2,7 +2,7 @@
 <script src="${resource(dir: 'js', file: 'databaseService.js')}"></script>
 <script src="${resource(dir: 'js/models', file: 'entertainmentTypeModel.js')}"></script>
 <script src="${resource(dir: 'js/models', file: 'entertainmentModel.js')}"></script>
-<script src="${resource(dir: 'js/models', file: 'userModel.js')}"></script>
+<script src="${resource(dir: 'js/models', file: 'progressModel.js')}"></script>
 
 <script>
     function fillDb() {
@@ -45,6 +45,24 @@
         // });
         // console.log(entertainmentModelGetAll(1));
         // console.log(entertainmentModelGetAll(2));
+
+        // progressModelCreateProgress({
+        //     username: 'admin',
+        //     entertainment: 1,
+        //     progress: 'Season 2 Episode 1'
+        // });
+        // console.log(progressModelGetAllByUser('admin'));
+        // progressModelCreateProgress({
+        //     username: 'admin',
+        //     entertainment: 2,
+        //     progress: 'Season 1 Episode 1'
+        // });
+        // console.log(progressModelGetAllByUser('admin'));
+        // progressModelDeleteProgress(2, {
+        //     username: 'admin'
+        // });
+
+        //TODO separate into functions
     }
 </script>
 

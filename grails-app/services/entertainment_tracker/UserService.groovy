@@ -12,7 +12,9 @@ class UserService {
     def createUser(params) {
         User newUser = new User()
         newUser.username = params.username
-        newUser.password = encryptString(params.password)
+
+        String password = new String(params.password)
+        newUser.password = encryptString(password)
 
         try {
             if (!newUser.save(flush:true)) {

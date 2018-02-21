@@ -1,13 +1,13 @@
 var baseURLProgress = "/progress";
 
-function progressModelCreate(data) {
+function progressModelCreateProgress(data) {
     return databaseService(baseURLProgress, data, "POST")
 }
 
-function progressModelGetByUser(username) {
+function progressModelGetAllByUser(username) {
     return databaseService(baseURLProgress + "/getAll/" + username, null, "GET")
 }
 
-function progressModelDeleteProgress(data) {
-    return databaseService(baseURLProgress + "/delete", data, "POST")
+function progressModelDeleteProgress(progressId, data) {
+    return databaseService(baseURLProgress + "/delete/" + progressId, data, "POST")
 }
