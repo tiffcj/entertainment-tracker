@@ -38,5 +38,7 @@ class UrlMappings {
         "/login"(view:"/login")
         "/register"(view:"/register")
         "/startup" (view:"/startup")
+        "/home/$username"(view:"/home")
+        "/create/$username"(view:"/create")
     }
 }

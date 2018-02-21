@@ -17,3 +17,12 @@ body {
 .well {
     background-color: white;
 }
+
+.navbar {
+    background-color: transparent;
+    border: none;
+}
+
+a:hover {
+    cursor:pointer;
+}

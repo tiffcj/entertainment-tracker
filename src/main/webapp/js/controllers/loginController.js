@@ -31,7 +31,7 @@ function login(loginInput) {
 }
 
 function goToRegister() {
-    window.location.href = '/register/';
+    window.location.href = '/register';
 }
 
 function register(loginInput) {
