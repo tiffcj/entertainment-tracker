@@ -7,8 +7,13 @@ body {
 .top-icons {
     margin-left: 10px;
     margin-right: 10px;
+    color: #5F9F9F;
 }
 
 .top {
     margin-bottom: 40px;
+}
+
+.well {
+    background-color: white;
 }

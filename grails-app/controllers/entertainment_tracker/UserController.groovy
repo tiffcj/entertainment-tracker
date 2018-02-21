@@ -5,8 +5,8 @@ class UserController {
 
     def userService
 
-    def addUser() {
-        respond userService.addUser(params)
+    def createUser() {
+        respond userService.createUser(params)
     }
 
     def checkUsername() {

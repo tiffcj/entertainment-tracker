@@ -5,10 +5,10 @@ function databaseService(url, data, requestType) {
         type: requestType,
         data: data,
         success: function(returnedData) {
-            alert (JSON.stringify(returnedData))
+            console.log(returnedData);
         },
         error: function(request, status, error) {
-            alert(error) //TODO: add proper error displaying
+            console.log(error); //TODO: add proper error displaying
         }
     });
 }

@@ -10,9 +10,19 @@ class UrlMappings {
         }
 
         group("/user") {
+            "/" (controller: "User", action: "createUser", method: "POST")
+            "/checkUsername/$username" (controller: "User", action: "checkUsername", method:"GET")
             "/login" (controller: "User", action: "login", method: "POST")
-            "/addUser" (controller: "User", action: "addUser", method: "POST")
-            "/checkUsername" (controller: "User", action: "checkUsername", method:"GET")
+        }
+
+        group("/entertainmentType") {
+            "/" (controller: "EntertainmentType", action: "createEntertainmentType", method: "POST")
+            "/" (controller: "EntertainmentType", action: "getAllEntertainmentTypes", method: "GET")
+        }
+
+        group("/entertainment") {
+            "/" (controller: "Entertainment", action: "createEntertainment", method: "POST")
+            "/getAll/$entertainmentTypeId" (controller: "Entertainment", action: "getAllByEntertainmentType", method: "GET")
         }
 
         "/"(view:"/login")
@@ -20,5 +30,6 @@ class UrlMappings {
         "404"(view:'/notFound')
 
         "/register"(view:"/register")
+        "/startup" (view:"/startup")
     }
 }
