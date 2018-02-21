@@ -29,7 +29,7 @@ Since this project is still in development, it is only currently available on lo
 ## Upcoming Features
 To see all upcoming features/improvements/fixes, see the [project board](https://github.com/tiffcj/entertainment-tracker/projects/1).
 
-### Screenshots
+## Screenshots
 Home page with progress list:
 ![Screenshot of Homepage](https://user-images.githubusercontent.com/28549417/36464324-d91981b0-1694-11e8-95b8-a251ee393f2c.png)
 
