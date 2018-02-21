@@ -61,6 +61,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a type="button" onclick="goToHome()">Home</a></li>
             <li><a type="button" onclick="goToCreate()">Add New Progress</a></li>
+            <li><a type="button" onclick="logout()">Logout</a></li>
         </ul>
     </div>
 </nav>

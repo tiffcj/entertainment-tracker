@@ -12,3 +12,7 @@ function goToHome() {
 function goToCreate() {
     window.location.href = '/create/' + currUsername;
 }
+
+function logout() {
+    window.location.href = '/login';
+}
