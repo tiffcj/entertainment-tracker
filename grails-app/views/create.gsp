@@ -15,8 +15,47 @@
 
     <!--JS-->
     <script src="${resource(dir: 'js', file: 'navbar.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'mustache.min.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'template.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'databaseService.js')}"></script>
+    <script src="${resource(dir: 'js/models', file: 'entertainmentTypeModel.js')}"></script>
+    <script src="${resource(dir: 'js/models', file: 'entertainmentModel.js')}"></script>
+    <script src="${resource(dir: 'js/models', file: 'progressModel.js')}"></script>
+    <script src="${resource(dir: 'js/controllers', file: 'createController.js')}"></script>
 
     <!--Mustache templates-->
+    <script type="text/html" id="entTypeOptionTemplate">
+    {{#entTypes}}
+    <option value="{{id}}">{{name}}</option>
+    {{/entTypes}}
+    </script>
+
+    <script type="text/html" id="createProgressTemplate">
+    <form>
+        <div class="row form-group">
+            <label for="nameSelect" class="control-label col-md-1 text-right">{{entertainmentTypeName}}:</label>
+            <div class="col-md-4">
+                <select class="form-control" id="nameSelect">
+                    <option value="0">Select...</option>
+                    {{#entertainments}}
+                    <option value="{{id}}">{{name}}</option>
+                    {{/entertainments}}
+                </select>
+            </div>
+
+            <label for="progressInput" class="control-label col-md-1 text-right">Progress:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="progressInput">
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-success" type="button" onclick="createProgress()">
+                    <i class="fa fa-plus"></i> Add Progress
+                </button>
+            </div>
+        </div>
+    </form>
+    </script>
     <!--End of Mustache templates-->
 </head>
 
@@ -40,7 +79,20 @@
     </div>
 
     <div class="well well-lg">
+        <form>
+            <div class="row form-group">
+                <label for="entTypeSelect" class="control-label col-md-4 text-right">Please select an entertainment type:</label>
+                <div class="col-md-4">
+                    <select class="form-control" id="entTypeSelect" onchange="selectType()">
+                        <option value="0">Select...</option>
+                    </select>
+                </div>
+            </div>
+        </form>
 
+        <br>
+
+        <div id="createProgressForm"></div>
     </div>
 
 </div>

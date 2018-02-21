@@ -30,8 +30,8 @@
     <table class="table table-striped" id="progressTable">
         <thead>
         <tr>
-            <th class="col-md-3">Name</th>
-            <th class="col-md-2">Type</th>
+            <th class="col-md-3">Entertainment Name</th>
+            <th class="col-md-2">Entertainment Type</th>
             <th class="col-md-4">Progress</th>
             <th class="col-md-3"></th>
         </tr>
@@ -76,7 +76,7 @@
 
     <div class="panel panel-default">
         <div class="panel-heading text-center">
-            <h3>Your Progress</h3>
+            <h3>Your Progress List</h3>
         </div>
 
         <div class="panel-body" id="mainPagePanelBody">

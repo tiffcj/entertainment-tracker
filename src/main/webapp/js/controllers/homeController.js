@@ -8,9 +8,13 @@ function renderProgresses() {
 
     $.when(progressModelGetAllByUser(currUsername)).done(function(progress){
         renderObj.progress = progress;
-        renderTemplate("progressTableTemplate", renderObj, "progresses");
+        renderTemplate("progressTableTemplate", renderObj, "progresses", false);
 
-        $("#progressTable").DataTable();
+        $("#progressTable").DataTable({
+            "columnDefs": [
+                { "orderable": false, "targets": 3 }
+            ]
+        });
     });
 }
 

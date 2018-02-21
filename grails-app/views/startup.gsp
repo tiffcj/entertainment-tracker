@@ -40,7 +40,7 @@
         // });
         // entertainmentModelCreate({
         //     name: 'Harry Potter',
-        //     entertainmentType: 2,
+        //     entertainmentType: 4,
         //     username: 'admin'
         // });
         // console.log(entertainmentModelGetAll(1));

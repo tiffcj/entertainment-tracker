@@ -6,7 +6,13 @@ class ProgressController {
     def progressService
 
     def createProgress() {
-        respond progressService.createProgress(params)
+        def result = progressService.createProgress(params)
+
+        if (result instanceof Integer) {
+            response.sendError(result)
+        } else {
+            respond result
+        }
     }
 
     def getAllByUser() {
@@ -14,6 +20,12 @@ class ProgressController {
     }
 
     def deleteProgress() {
-        respond progressService.deleteProgress(params)
+        def result = progressService.deleteProgress(params)
+
+        if (result instanceof Integer) {
+            response.sendError(result)
+        } else {
+            respond result
+        }
     }
 }
