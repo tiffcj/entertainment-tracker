@@ -18,4 +18,12 @@ function renderProgresses() {
     });
 }
 
+function deleteProgress(progressId) {
+    var data = { username: currUsername };
+
+    $.when(progressModelDeleteProgress(progressId, data)).done(function(delProgress){
+        renderProgresses();
+    });
+}
+
 $(document).ready(renderProgresses());
