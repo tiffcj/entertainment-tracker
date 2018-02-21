@@ -4,7 +4,7 @@
 This project was motivated by the wide variety of entertainment-delivery systems e.g. Netflix, Amazon Video, Crunchyroll, MangaFox, podcast apps, many of which have content that is exclusive to those sites/apps. You may have various progresses in various shows/books/movies etc. scattered on each of these sites. This web app allows you to collect all of those progresses in one place for your convenience, so you may, for example, choose to watch a show where you're close to the end, read a book that you need to catch up on, or jot down something that you want to watch/read later.
 
 ### Tech stack
-This app currently uses H2 for the database, Grails (and the Apache Groovy language) for the back-end/API, and HTML, CSS, JavaScript (along with Bootstrap, jQuery and Mustache) for the front-end. The back-end is located [here](https://github.com/tiffcj/entertainment-tracker/tree/master/grails-app). The JavaScript and styling of the front-end is located [here](https://github.com/tiffcj/entertainment-tracker/tree/master/src/main/webapp), and the views are located [here](https://github.com/tiffcj/entertainment-tracker/tree/master/grails-app/views) as Groovy Server Pages. The front-end is currently embedded in the Grails app to take advantage of its navigation capabilities and to avoid CORS issues, with a vision to eventually move the front-end to a separate repo/location. The database is stored locally.
+This app currently uses H2 for the database, Grails (and the Apache Groovy language) for the back-end/API, and HTML, CSS, JavaScript (along with Bootstrap, jQuery and Mustache) for the front-end. The back-end is located [here](https://github.com/tiffcj/entertainment-tracker/tree/master/grails-app). The JavaScript and styling of the front-end is located [here](https://github.com/tiffcj/entertainment-tracker/tree/master/src/main/webapp), and the views are located [here](https://github.com/tiffcj/entertainment-tracker/tree/master/grails-app/views) as Groovy Server Pages. The front-end is currently embedded in the Grails app to take advantage of its navigation capabilities and to avoid CORS issues, with a vision to eventually move the front-end to a separate repo/location and use an existing framework for the routing. The database is stored locally.
 
 ## Setup Instructions
 Since this project is still in development, it is only currently available on localhost.
@@ -31,7 +31,7 @@ To see all upcoming features/improvements/fixes, see the [project board](https:/
 
 ### Screenshots
 Home page with progress list:
-![Screenshot of Homepage](https://user-images.githubusercontent.com/28549417/36463473-d0fe4d58-168f-11e8-804a-7cf9865646c7.png)
+![Screenshot of Homepage](https://user-images.githubusercontent.com/28549417/36464324-d91981b0-1694-11e8-95b8-a251ee393f2c.png)
 
 Create progress page:
 ![Screenshot of Create page](https://user-images.githubusercontent.com/28549417/36463493-e7ae7514-168f-11e8-9ae2-cf3f4bf80815.png)
