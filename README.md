@@ -31,7 +31,7 @@ To see all upcoming features/improvements/fixes, see the [project board](https:/
 
 ## Screenshots
 Home page with progress list:
-![Screenshot of Homepage](https://user-images.githubusercontent.com/28549417/36464324-d91981b0-1694-11e8-95b8-a251ee393f2c.png)
+![Screenshot of Homepage](https://user-images.githubusercontent.com/28549417/36519355-ad410358-1750-11e8-9420-25623038553d.png)
 
 Create progress page:
-![Screenshot of Create page](https://user-images.githubusercontent.com/28549417/36463493-e7ae7514-168f-11e8-9ae2-cf3f4bf80815.png)
+![Screenshot of Create page](https://user-images.githubusercontent.com/28549417/36519389-d55a4570-1750-11e8-8045-641b396d91fc.png)
