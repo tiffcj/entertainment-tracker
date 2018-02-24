@@ -1,10 +1,12 @@
 var currUsername;
 
-function getAllEntertainmentTypes() {
+function getCurrUser() {
     var urlTokens = (window.location.pathname).split ('/');
-    var renderObj = {};
-
     currUsername = urlTokens[2];
+}
+
+function getAllEntertainmentTypes() {
+    var renderObj = {};
 
     $.when(entertainmentTypeModelGetAll()).done(function(entTypes){
         renderObj.entTypes = entTypes;
@@ -12,7 +14,7 @@ function getAllEntertainmentTypes() {
     });
 }
 
-$(document).ready(getAllEntertainmentTypes());
+$(document).ready(getCurrUser(), getAllEntertainmentTypes());
 
 function selectType() {
     var entTypeId = $("#entTypeSelect").val();
@@ -41,7 +43,7 @@ function createProgress() {
     if (entertainmentId != 0) {
         data.username = currUsername;
         data.entertainment = entertainmentId;
-        data.progress = $('#progressInput').val().trim();
+        data.progress = $('#progressInput').val();
 
         console.log(data);
 

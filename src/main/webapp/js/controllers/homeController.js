@@ -1,10 +1,12 @@
 var currUsername;
 
-function renderProgresses() {
+function getCurrUser() {
     var urlTokens = (window.location.pathname).split ('/');
-    var renderObj = {};
-
     currUsername = urlTokens[2];
+}
+
+function renderProgresses() {
+    var renderObj = {};
 
     $.when(progressModelGetAllByUser(currUsername)).done(function(progress){
         renderObj.progress = progress;
@@ -13,7 +15,8 @@ function renderProgresses() {
         $("#progressTable").DataTable({
             "columnDefs": [
                 { "orderable": false, "targets": 3 }
-            ]
+            ],
+            "order": [[ 1, "asc" ]]
         });
     });
 }
@@ -26,4 +29,15 @@ function deleteProgress(progressId) {
     });
 }
 
-$(document).ready(renderProgresses());
+function updateProgress(progressId) {
+    var data = {
+        username: currUsername,
+        progress: $('#progressInput' + progressId).val()
+    };
+
+    $.when(progressModelUpdateProgress(progressId, data)).done(function(progress){
+        window.location.reload();
+    });
+}
+
+$(document).ready(getCurrUser(), renderProgresses());

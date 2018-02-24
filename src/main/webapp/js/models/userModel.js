@@ -9,5 +9,5 @@ function userModelCheckUsername(username) {
 }
 
 function userModelLogin(data) {
-    return databaseService(baseURLUser+"/login", data, "POST")
+    return databaseService(baseURLUser+"/login", data, "GET")
 }

@@ -1,9 +1,11 @@
 var currUsername;
 
-$(document).ready(function() {
+function getCurrUser() {
     var urlTokens = (window.location.pathname).split ('/');
     currUsername = urlTokens[2];
-});
+}
+
+$(document).ready(getCurrUser());
 
 function goToHome() {
     window.location.href = '/home/' + currUsername;
