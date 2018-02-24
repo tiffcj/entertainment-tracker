@@ -36,31 +36,31 @@ class EntertainmentService {
         }
     }
 
-    def updateEntertainment(params) {
-        Entertainment ent = Entertainment.findByIdAndLogicalDeletedOnDatetime(params.entertainment, null)
-        def currUser = User.findByUsername (params.username)
-
-        if (ent == null) {
-            return 404
-        } else if (currUser == null) {
-            return 400
-        }
-
-        ent.name = params.name
-        ent.lastUpdatedByUser = currUser
-        ent.lastUpdatedOnDatetime = new Date()
-
-        try {
-            if (!ent.save(flush:true)) {
-                println ent.errors
-                return ent.errors
-            } else {
-                return ent
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e)
-        }
-    }
+//    def updateEntertainment(params) {
+//        Entertainment ent = Entertainment.findByIdAndLogicalDeletedOnDatetime(params.entertainment, null)
+//        def currUser = User.findByUsername (params.username)
+//
+//        if (ent == null) {
+//            return 404
+//        } else if (currUser == null) {
+//            return 400
+//        }
+//
+//        ent.name = params.name
+//        ent.lastUpdatedByUser = currUser
+//        ent.lastUpdatedOnDatetime = new Date()
+//
+//        try {
+//            if (!ent.save(flush:true)) {
+//                println ent.errors
+//                return ent.errors
+//            } else {
+//                return ent
+//            }
+//        } catch (Exception e) {
+//            throw new RuntimeException(e)
+//        }
+//    }
 
     def getAllByEntertainmentType(params) {
         def result

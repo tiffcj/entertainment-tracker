@@ -44,10 +44,36 @@
             <td>{{entertainment.entertainmentType.name}}</td>
             <td>{{progress}}</td>
             <td>
-                %{--<button class="btn btn-primary" type="button"><i class='fa fa-edit'></i> Edit</button>--}%
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#updateProgressModal{{id}}"><i class='fa fa-edit'></i> Edit</button>
                 <button class="btn btn-danger" type="button" onclick="deleteProgress({{id}})"><i class='fa fa-trash'></i></button>
             </td>
         </tr>
+
+        <div id="updateProgressModal{{id}}" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Progress for {{entertainment.name}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row form-group">
+                                <label for="progressInput{{id}}" class="control-label col-md-2 text-right">Progress:</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="progressInput{{id}}" value="{{progress}}">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" data-dismiss="modal" onclick="updateProgress({{id}})">
+                            <i class="fa fa-save"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{/progress}}
         </tbody>
     </table>
@@ -85,5 +111,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

@@ -28,4 +28,14 @@ class ProgressController {
             respond result
         }
     }
+
+    def updateProgress() {
+        def result = progressService.updateProgress(params)
+
+        if (result instanceof Integer) {
+            response.sendError(result)
+        } else {
+            respond result
+        }
+    }
 }

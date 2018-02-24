@@ -12,7 +12,7 @@ class UrlMappings {
         group("/user") {
             "/" (controller: "User", action: "createUser", method: "POST")
             "/checkUsername/$username" (controller: "User", action: "checkUsername", method:"GET")
-            "/login" (controller: "User", action: "login", method: "POST")
+            "/login" (controller: "User", action: "login", method: "GET")
         }
 
         group("/entertainmentType") {
@@ -29,6 +29,7 @@ class UrlMappings {
             "/" (controller: "Progress", action: "createProgress", method: "POST")
             "/getAll/$username" (controller: "Progress", action: "getAllByUser", method: "GET")
             "/delete/$id" (controller: "Progress", action: "deleteProgress", method: "POST")
+            "/$id" (controller: "Progress", action: "updateProgress", method: "PUT")
         }
 
         "/"(view:"/login")

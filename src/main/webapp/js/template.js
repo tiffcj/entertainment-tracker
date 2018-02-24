@@ -8,4 +8,3 @@ function renderTemplate(templateId, renderObj, targetId, append) {
         $("#" + targetId).html(templateHtml);
     }
 }
-

@@ -11,3 +11,7 @@ function progressModelGetAllByUser(username) {
 function progressModelDeleteProgress(progressId, data) {
     return databaseService(baseURLProgress + "/delete/" + progressId, data, "POST")
 }
+
+function progressModelUpdateProgress(progressId, data) {
+    return databaseService(baseURLProgress + "/" + progressId, data, "PUT")
+}
